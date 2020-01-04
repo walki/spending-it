@@ -4,8 +4,10 @@
   "description": "Expense Tracking App",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "jest --watch"
+    "start": "node app",
+    "test": "jest --watch",
+    "e2e": "node nightwatch"
+
   },
   "repository": {
     "type": "git",
