@@ -49,7 +49,11 @@ mongoose
 
 app.get('/', (req,res) => {
     res.render('index');
-})
+});
+
+app.get('/expense', (req, res) => {
+    res.render('expense');
+});
 
 app.listen(PORT, () => {
     console.log('Spending-It Server has started on port ' + PORT);

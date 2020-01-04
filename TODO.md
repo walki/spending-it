@@ -1,13 +1,11 @@
 # TODO
 
-Set up testing
-
-bootstrap
-
-styling, google fonts, color pallet, icons
-
 add expense route and form - money to start
 add expense model
+
+bootstrap
+styling, google fonts, color pallet, icons
+
 
 partials header / footer
 
