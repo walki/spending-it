@@ -10,16 +10,16 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 app.set('view engine', 'ejs');
-app.use(bp.urlencoded({
-    extended: true
-}));
+app.use(
+    bp.urlencoded({
+        extended: true
+    })
+);
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 
-
 const PORT = process.env.PORT || 3000;
-
 
 const dbUri =
     'mongodb+srv://' +
@@ -47,9 +47,10 @@ mongoose
     });
 
 
+app.get('/', (req,res) => {
+    res.render('index');
+})
 
-    app.listen(PORT, () => {
-        console.log(
-            'Spending-It Server has started on port ' + PORT
-        );
-    });
+app.listen(PORT, () => {
+    console.log('Spending-It Server has started on port ' + PORT);
+});
