@@ -4,7 +4,7 @@ module.exports = {
         browser
         .url('http://localhost:3000/')
         .getTitle()
-        .assert.containsText('Spending It')
+        .assert.title('Spending It')
         
     },
 

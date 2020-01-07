@@ -1,1 +1,22 @@
-<h1>YOU HAVE MADE IT!</h1>
+<%- include("partials/header") %>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">
+            Welcome to Spending It
+        </h1>
+        <p class="lead">
+            Let's keep track of your expenses.
+        </p>
+        <hr class="my-4">
+        <p>
+            Share them with friends to split or keep track of the household.
+        </p>
+        <a class="btn btn-primary btn-lg" href="/expenses" role="button">View your Expenses</a>
+        <a class="btn btn-secondary btn-lg" href="/expenses/new" role="button">Add an Expense</a>
+        <a class="btn btn-secondary btn-lg" href="/wheres" role="button">Add a Where</a>
+        <a class="btn btn-secondary btn-lg" href="/whats" role="button">Add a What</a>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

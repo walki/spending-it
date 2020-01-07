@@ -1,2 +1,36 @@
-<input type="number" name="expense" placeholder="10.00">
-<button type="submit">Submit</button>
+<%- include("../partials/header") %>
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+
+                <form action="/expenses" method="POST">
+                    <div class="form-group">
+                        <label for="datetime">When</label>
+                        <input type="text" class="form-control" id="date" name="date" data-inputmask-alias="datetime"
+                            data-inputmask-inputformat="mm/dd/yyyy" data-inputmask-placeholder="mm/dd/yyyy">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency">How Much</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">$</div>
+                            </div>
+                            <input type="text" class="form-control text-right" name="expense[amount]"
+                                data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 2, 'digitsOptional': false,  'placeholder': '0'">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Add Expense</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>
