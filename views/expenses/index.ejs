@@ -1,11 +1,15 @@
 <%- include("../partials/header") %>
 
-
-
-<ul>
-    <% expenses.forEach( (expense) => { %>
-        <li><%= new Intl.DateTimeFormat('en-US').format(expense.date) %> - <%= accounting.formatMoney(expense.amount) %> </li>
-     <% }); %>
-</ul>
+<div class="container list-striped">
+    <ul class="list-group">
+        <% expenses.forEach( (expense) => { %>
+        <li class="list-group-item d-flex justify-content-between">
+            <span class="date"><%= new Intl.DateTimeFormat('en-US').format(expense.date) %></span>
+            <span class="amount"><%= accounting.formatMoney(expense.amount) %></span>
+        </li>
+        <% }); %>
+    </ul>
+    <a href="/expenses/new" class="btn btn-primary">Add new expense</a>
+</div>
 
 <%- include("../partials/footer") %>
