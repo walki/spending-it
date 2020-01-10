@@ -1,5 +1,11 @@
+<%- include("../partials/header") %>
+
+
+
 <ul>
-    <li>Test 1</li>
-    <li>Test 2</li>
-    <li>Test 3</li>
+    <% expenses.forEach( (expense) => { %>
+        <li><%= new Intl.DateTimeFormat('en-US').format(expense.date) %> - <%= accounting.formatMoney(expense.amount) %> </li>
+     <% }); %>
 </ul>
+
+<%- include("../partials/footer") %>

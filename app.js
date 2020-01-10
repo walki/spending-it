@@ -11,6 +11,7 @@ dotenv.config();
 
 const expenseRoutes = require('./routes/expense');
 
+app.locals.accounting = require('accounting');
 
 app.set('view engine', 'ejs');
 app.use(
@@ -21,6 +22,7 @@ app.use(
 
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
+
 
 const PORT = process.env.PORT || 3000;
 

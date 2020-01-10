@@ -33,7 +33,6 @@ add route to delete
 bootstrap
 styling, google fonts, color pallet, icons
 
-
 partials header / footer
 
 login / signup / logout
@@ -46,3 +45,8 @@ expenses can go to multiple groups
 integration with venmo and other apps
 
 expense acct, shared amongst other people, groups
+
+webpack for clientside scripts
+
+- inputmask
+- accoumting
