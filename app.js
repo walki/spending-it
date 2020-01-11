@@ -10,6 +10,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const expenseRoutes = require('./routes/expense');
+const categoryRoutes = require('./routes/category');
+const payeeRoutes = require('./routes/payee');
 
 app.locals.accounting = require('accounting');
 
@@ -57,6 +59,8 @@ app.get('/', (req,res) => {
 });
 
 app.use('/expenses', expenseRoutes);
+app.use('/whats', categoryRoutes);
+app.use('/wheres', payeeRoutes);
 
 app.listen(PORT, () => {
     console.log('Spending-It Server has started on port ' + PORT);

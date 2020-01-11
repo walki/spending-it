@@ -20,25 +20,16 @@ views/
 models/
     expenses.js
 
+- [ ] add route to post new expense
+- [ ] add view to edit expense
+- [ ] add route to update
+- [ ] add route to delete
 
-
-add expense model
-move form to different route and rename
-add view to list all expenses
-add route to post new expense
-add view to edit expense
-add route to update
-add route to delete
-
-bootstrap
 styling, google fonts, color pallet, icons
-
-partials header / footer
 
 login / signup / logout
 
 shared expenses?
-move rotues into their own folder
 
 groups
 expenses can go to multiple groups

@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <form action="/wheres" method="POST">
+                    <div class="form-group">
+                        <label for="payee[name]">Payee Name</label>
+                        <input type="text" class="form-control" id="name" 
+                                name="payee[name]" placeholder="Where?">
+                    </div>
+                    <button class="btn btn-primary">Add Where</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>

@@ -9,7 +9,11 @@
         </li>
         <% }); %>
     </ul>
-    <a href="/expenses/new" class="btn btn-primary">Add new expense</a>
+    <div class="container justify-content-about">
+        <a class="btn btn-primary btn-lg" href="/expenses/new" role="button">Add an Expense</a>
+        <a class="btn btn-secondary btn-lg" href="/whats/new" role="button">Add a What</a>
+        <a class="btn btn-secondary btn-lg" href="/wheres/new" role="button">Add a Where</a>
+    </div>
 </div>
 
 <%- include("../partials/footer") %>
