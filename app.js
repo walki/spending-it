@@ -12,6 +12,7 @@ dotenv.config();
 const expenseRoutes = require('./routes/expense');
 const categoryRoutes = require('./routes/category');
 const payeeRoutes = require('./routes/payee');
+const seedDB = require('./seeds');
 
 app.locals.accounting = require('accounting');
 
@@ -53,6 +54,7 @@ mongoose
         console.log('ERROR:', err.message);
     });
 
+seedDB();
 
 app.get('/', (req,res) => {
     res.render('index');
