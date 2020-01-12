@@ -28,7 +28,9 @@ app.use(methodOverride('_method'));
 
 
 const PORT = process.env.PORT || 3000;
-const NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+console.log("NODE_ENV: " + NODE_ENV);
 
 const dbUri =
     'mongodb+srv://' +
@@ -55,7 +57,7 @@ mongoose
         console.log('ERROR:', err.message);
     });
 
-if (NODE_ENV == 'develpoment') seedDB();
+if (NODE_ENV == 'development') seedDB();
 
 app.get('/', (req,res) => {
     res.render('index');
